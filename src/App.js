@@ -1,7 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
+function onClickApi() {
+  fetch("/api/getlist")
+    .then(response => {
+      return response;
+    })
+    .then(data => {
+      alert(JSON.stringify(data));
+    });
+}
+
+function onClickRemote() {
+  fetch("/remote/getName")
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      alert(JSON.stringify(data));
+    });
+}
 function App() {
   return (
     <div className="App">
@@ -18,6 +37,8 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={onClickApi}>api</button>
+        <button onClick={onClickRemote}>remote</button>
       </header>
     </div>
   );
