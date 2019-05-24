@@ -100,13 +100,7 @@ module.exports = function(proxy, allowedHost) {
       // https://github.com/facebook/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware());
 
-      apiMocker(app, path.resolve("./mocker/index.js"), {
-        proxy: {
-          "/remote/*": "https://www.baidu.com/",
-          "/api/*": `http://localhost:3000`
-        },
-        changeHost: true
-      });
+      apiMocker(app, path.resolve("./mocker/index.js"));
     }
   };
 };

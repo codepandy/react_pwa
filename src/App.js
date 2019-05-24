@@ -5,7 +5,7 @@ import "./App.css";
 function onClickApi() {
   fetch("/api/getlist")
     .then(response => {
-      return response;
+      return response.json();
     })
     .then(data => {
       alert(JSON.stringify(data));

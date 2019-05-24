@@ -135,5 +135,6 @@
   },
   "devDependencies": {
     "mocker-api": "^1.7.6"
-  }
+  },
+  "proxy": "http://localhost:3721/"
 }

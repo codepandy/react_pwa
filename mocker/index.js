@@ -7,7 +7,7 @@ const proxy = {
   "GET /api/getlist": (req, res) => {
     res.send({
       id: "abc",
-      name: "温木",
+      name: "温木111",
       age: 29
     });
   },
